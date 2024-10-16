@@ -1,25 +1,79 @@
-Preconditions:
-User is on the homepage: http://blazedemo.com/
-Test Steps:
-Locate the "Departure City" dropdown menu.
-Select "Boston" from the "Departure City" dropdown.
-Locate the "Destination City" dropdown menu.
-Select "New York" from the "Destination City" dropdown.
-Click on the "Find Flights" button.
-Observe the results page.
-Test Data:
+Before Starting:
+Ensure you're on the homepage of the website: http://blazedemo.com/.
+What to Do:
+Search for Flights:
+
+a. Find the dropdown menu for the Departure City.
+b. Select "Boston" from the departure city list.
+c. Find the dropdown menu for the Destination City.
+d. Choose "New York" from the destination city options.
+e. Click the "Find Flights" button to search for available flights.
+f. Wait for the flights listing page to load.
+Select a Flight:
+
+a. From the list of available flights, choose one by clicking the corresponding "Choose This Flight" button.
+Enter Passenger and Payment Details:
+
+a. On the reservation page, fill in the Passenger Information:
+Name
+Address
+City
+State
+Zip Code
+Credit Card Number
+Credit Card Month
+Credit Card Year
+Name on Card
+b. After entering all required information, click the "Purchase Flight" button.
+Verify Confirmation:
+
+a. Wait for the confirmation page to load.
+b. Review the confirmation details to ensure all information is correct.
+What You're Using for This Test:
 Departure City: Boston
 Destination City: New York
-Expected Results:
-Step 5:
-User is redirected to the flights listing page.
-Step 6:
-A list of available flights from Boston to New York is displayed.
-Each flight entry includes:
+Passenger Details:
+Name: John Doe
+Address: 123 Elm Street
+City: Boston
+State: MA
+Zip Code: 02118
+Payment Details:
+Credit Card Number: 4111111111111111
+Credit Card Month: 12
+Credit Card Year: 2025
+Name on Card: John Doe
+What Should Happen:
+After Clicking "Find Flights":
+
+a. You should be taken to a new page that lists available flights from Boston to New York.
+On the Flights Listing Page:
+
+a. A list of flights from Boston to New York is displayed.
+b. Each flight entry includes:
 Airline Name
 Flight Number
 Departure Time
 Arrival Time
 Price
-No error messages are displayed.
-The URL reflects the search parameters (optional).
+c. There are "Choose This Flight" buttons next to each flight.
+d. No error messages are displayed.
+e. (Optionally) The URL reflects the search parameters.
+After Selecting a Flight and Clicking "Choose This Flight":
+
+a. You should be redirected to the reservation page where you can enter passenger and payment details.
+On the Reservation Page:
+
+a. All fields for passenger and payment information are present and editable.
+b. After entering valid information and clicking "Purchase Flight", you should proceed to the confirmation page.
+On the Confirmation Page:
+
+a. A confirmation message is displayed, indicating that the flight has been successfully booked.
+b. The confirmation details include:
+Booking ID
+Flight Information (Airline, Flight Number, Departure and Arrival Times)
+Passenger Information
+Payment Details (masked credit card number)
+Price
+c. There are no error messages.
+d. (Optionally) The URL reflects the confirmation state or booking ID.
