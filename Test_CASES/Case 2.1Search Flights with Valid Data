@@ -1,0 +1,25 @@
+Preconditions:
+User is on the homepage: http://blazedemo.com/
+Test Steps:
+Locate the "Departure City" dropdown menu.
+Select "Boston" from the "Departure City" dropdown.
+Locate the "Destination City" dropdown menu.
+Select "New York" from the "Destination City" dropdown.
+Click on the "Find Flights" button.
+Observe the results page.
+Test Data:
+Departure City: Boston
+Destination City: New York
+Expected Results:
+Step 5:
+User is redirected to the flights listing page.
+Step 6:
+A list of available flights from Boston to New York is displayed.
+Each flight entry includes:
+Airline Name
+Flight Number
+Departure Time
+Arrival Time
+Price
+No error messages are displayed.
+The URL reflects the search parameters (optional).
