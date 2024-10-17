@@ -1,4 +1,3 @@
-// data/flightData.json
 {
     "departureCity": "Boston",
     "destinationCity": "New York"
