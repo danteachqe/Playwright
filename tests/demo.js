@@ -1,8 +1,8 @@
 // tests/flightReservation.spec.js
 
 const { test, expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { FlightsPage } = require('../pages/FlightsPage1');
+const { HomePage, HomePage } = require('../pages/HomePage');
+const { FlightsPage } = require('../pages/FlightsPage');
 const { PurchasePage } = require('../pages/PurchasePage');
 const { ConfirmationPage } = require('../pages/ConfirmationPage');
 
@@ -15,7 +15,7 @@ test('Search and Reserve a Flight on BlazeDemo', async ({ page }) => {
   const { departureCity, destinationCity } = flightData;
 
   const homePage = new HomePage(page);
-  const flightsPage = new FlightsPage1(page);
+  const flightsPage = new FlightsPage(page);
   const purchasePage = new PurchasePage(page);
   const confirmationPage = new ConfirmationPage(page);
 
