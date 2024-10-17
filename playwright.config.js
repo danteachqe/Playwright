@@ -47,7 +47,7 @@ module.exports = defineConfig({
 
   // Global configuration for tests
   use: {
-    headless: false,                        // Run tests in headless mode (set to true in CI for faster execution)
+    headless: true,                        // Run tests in headless mode (set to true in CI for faster execution)
     viewport: { width: 1280, height: 720 }, // Default viewport size
     ignoreHTTPSErrors: true,                // Ignore HTTPS errors
     video: 'retain-on-failure',             // Record video only on test failures
