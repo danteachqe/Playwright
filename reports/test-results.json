@@ -10,9 +10,7 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 1
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "reporter": [
       [
@@ -65,90 +63,27 @@
     "workers": 6,
     "webServer": null
   },
-  "suites": [
+  "suites": [],
+  "errors": [
     {
-      "title": "demo.js",
-      "file": "demo.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 5899,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-17T09:15:04.903Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b9db4802c80ff65570a6-7587ecdbd5ffb612d1da",
-          "file": "demo.js",
-          "line": 14,
-          "column": 1
-        }
-      ]
+      "message": "Error: Cannot find module '../pages/FlightsPage1'\nRequire stack:\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\transform\\transform.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\processHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loadUtils.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\reporters.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\runner.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\program.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\@playwright\\test\\cli.js",
+      "stack": "Error: Cannot find module '../pages/FlightsPage1'\nRequire stack:\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\transform\\transform.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\processHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loadUtils.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\reporters.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\runner.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\program.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\@playwright\\test\\cli.js\n    at Object.<anonymous> (C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js:5:25)",
+      "location": {
+        "file": "C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js",
+        "column": 25,
+        "line": 5
+      },
+      "snippet": "\u001b[90m   at \u001b[39mdemo.js:5\n\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mconst\u001b[39m { test\u001b[33m,\u001b[39m expect } \u001b[33m=\u001b[39m require(\u001b[32m'@playwright/test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mHomePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/HomePage'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mFlightsPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/FlightsPage1'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mPurchasePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/PurchasePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mConfirmationPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/ConfirmationPage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
+    },
+    {
+      "message": "Error: No tests found",
+      "stack": "Error: No tests found"
     }
   ],
-  "errors": [],
   "stats": {
-    "startTime": "2024-10-17T09:15:03.285Z",
-    "duration": 8852.010999999999,
-    "expected": 1,
+    "startTime": "2024-10-17T10:52:58.436Z",
+    "duration": 363.2930000000001,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
