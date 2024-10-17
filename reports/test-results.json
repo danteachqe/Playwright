@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -87,7 +87,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 10096,
+                  "duration": 8463,
                   "errors": [],
                   "stdout": [
                     {
@@ -129,7 +129,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-17T12:53:09.604Z",
+                  "startTime": "2024-10-17T16:19:05.102Z",
                   "attachments": []
                 }
               ],
@@ -164,7 +164,7 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 9324,
+                  "duration": 9022,
                   "errors": [],
                   "stdout": [
                     {
@@ -206,7 +206,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-17T12:53:09.489Z",
+                  "startTime": "2024-10-17T16:19:05.102Z",
                   "attachments": []
                 }
               ],
@@ -219,90 +219,13 @@
           "column": 1
         }
       ]
-    },
-    {
-      "title": "demo2.js",
-      "file": "demo2.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 9669,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-17T12:53:09.540Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "4e510de91a6770d0dfc7-ec5568c1aa334edf9220",
-          "file": "demo2.js",
-          "line": 14,
-          "column": 1
-        }
-      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-17T12:53:07.795Z",
-    "duration": 13259.365,
-    "expected": 3,
+    "startTime": "2024-10-17T16:19:04.171Z",
+    "duration": 11112.671,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
