@@ -1,10 +1,10 @@
 // tests/flightReservation.spec.js
 
 const { test, expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { FlightsPage } = require('../pages/FlightsPage');
-const { PurchasePage } = require('../pages/PurchasePage');
-const { ConfirmationPage } = require('../pages/ConfirmationPage');
+const { HomePage } = require('../Pages/HomePage');
+const { FlightsPage } = require('../Pages/FlightsPage');
+const { PurchasePage } = require('../Pages/PurchasePage');
+const { ConfirmationPage } = require('../Pages/ConfirmationPage');
 
 // Import test data
 const flightData = require('../data/flightData1.json');
