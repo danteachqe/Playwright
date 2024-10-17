@@ -66,8 +66,8 @@
   "suites": [],
   "errors": [
     {
-      "message": "Error: Cannot find module '../data/flightData.json'\nRequire stack:\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\transform\\transform.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\processHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loadUtils.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\reporters.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\runner.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\program.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\@playwright\\test\\cli.js",
-      "stack": "Error: Cannot find module '../data/flightData.json'\nRequire stack:\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\transform\\transform.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\common\\esmLoaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\processHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loaderHost.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\loadUtils.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\reporters.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\runner\\runner.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\playwright\\lib\\program.js\n- C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\node_modules\\@playwright\\test\\cli.js\n    at Object.<anonymous> (C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js:10:20)",
+      "message": "SyntaxError: C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\data\\flightData.json: Unexpected token '/', \"// data/fl\"... is not valid JSON",
+      "stack": "SyntaxError: C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\data\\flightData.json: Unexpected token '/', \"// data/fl\"... is not valid JSON\n    at Object.<anonymous> (C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js:10:20)",
       "location": {
         "file": "C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js",
         "column": 20,
@@ -81,8 +81,8 @@
     }
   ],
   "stats": {
-    "startTime": "2024-10-17T08:51:37.574Z",
-    "duration": 166.567,
+    "startTime": "2024-10-17T09:00:16.027Z",
+    "duration": 52.322000000000116,
     "expected": 0,
     "skipped": 0,
     "unexpected": 0,
