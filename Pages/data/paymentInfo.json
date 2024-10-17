@@ -1,0 +1,8 @@
+// data/paymentInfo.json
+{
+    "creditCardNumber": "4111111111111111",
+    "creditCardMonth": "12",
+    "creditCardYear": "2025",
+    "nameOnCard": "John Doe"
+  }
+  

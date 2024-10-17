@@ -1,25 +1,18 @@
+// tests/flightReservation.spec.js
+
 const { test, expect } = require('@playwright/test');
-const { HomePage } = require('./pages/HomePage');
-const { FlightsPage } = require('./pages/FlightsPage');
-const { PurchasePage } = require('./pages/PurchasePage');
-const { ConfirmationPage } = require('./pages/ConfirmationPage');
+const { HomePage } = require('../pages/HomePage');
+const { FlightsPage } = require('../pages/FlightsPage');
+const { PurchasePage } = require('../pages/PurchasePage');
+const { ConfirmationPage } = require('../pages/ConfirmationPage');
+
+// Import test data
+const flightData = require('../data/flightData.json');
+const passengerInfo = require('../data/passengerInfo.json');
+const paymentInfo = require('../data/paymentInfo.json');
 
 test('Search and Reserve a Flight on BlazeDemo', async ({ page }) => {
-  const departureCity = 'Boston';
-  const destinationCity = 'New York';
-  const passengerInfo = {
-    name: 'John Doe',
-    address: '123 Elm Street',
-    city: 'Boston',
-    state: 'MA',
-    zipCode: '02118',
-  };
-  const paymentInfo = {
-    creditCardNumber: '4111111111111111',
-    creditCardMonth: '12',
-    creditCardYear: '2025',
-    nameOnCard: 'John Doe',
-  };
+  const { departureCity, destinationCity } = flightData;
 
   const homePage = new HomePage(page);
   const flightsPage = new FlightsPage(page);
