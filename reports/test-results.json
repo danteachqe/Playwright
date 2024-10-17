@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 3
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -52,7 +54,7 @@
         "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "**/*demo.js"
+          "**/*demo*.js"
         ],
         "timeout": 30000
       }
@@ -63,27 +65,244 @@
     "workers": 6,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "SyntaxError: C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js: Identifier 'HomePage' has already been declared. (4:18)\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mconst\u001b[39m { test\u001b[33m,\u001b[39m expect } \u001b[33m=\u001b[39m require(\u001b[32m'@playwright/test'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mHomePage\u001b[39m\u001b[33m,\u001b[39m \u001b[33mHomePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/HomePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mFlightsPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/FlightsPage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 6 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mPurchasePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/PurchasePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mConfirmationPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/ConfirmationPage'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js: Identifier 'HomePage' has already been declared. (4:18)\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mconst\u001b[39m { test\u001b[33m,\u001b[39m expect } \u001b[33m=\u001b[39m require(\u001b[32m'@playwright/test'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mHomePage\u001b[39m\u001b[33m,\u001b[39m \u001b[33mHomePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/HomePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mFlightsPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/FlightsPage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 6 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mPurchasePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/PurchasePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mConfirmationPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/ConfirmationPage'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m",
-      "location": {
-        "file": "C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\tests\\demo.js",
-        "line": 4,
-        "column": 18
-      },
-      "snippet": "\u001b[90m   at \u001b[39mdemo.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mconst\u001b[39m { test\u001b[33m,\u001b[39m expect } \u001b[33m=\u001b[39m require(\u001b[32m'@playwright/test'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mHomePage\u001b[39m\u001b[33m,\u001b[39m \u001b[33mHomePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/HomePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mFlightsPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/FlightsPage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 6 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mPurchasePage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/PurchasePage'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m \u001b[36mconst\u001b[39m { \u001b[33mConfirmationPage\u001b[39m } \u001b[33m=\u001b[39m require(\u001b[32m'../pages/ConfirmationPage'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+      "title": "demo.js",
+      "file": "demo.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Search and Reserve a Flight on BlazeDemo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 10096,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Verifying flights listing page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying flight entries are displayed...\n"
+                    },
+                    {
+                      "text": "Number of flights found: 5\n"
+                    },
+                    {
+                      "text": "Selecting the first available flight...\n"
+                    },
+                    {
+                      "text": "Verifying reservation page loaded...\n"
+                    },
+                    {
+                      "text": "Filling in passenger information...\n"
+                    },
+                    {
+                      "text": "Filling in payment information...\n"
+                    },
+                    {
+                      "text": "Clicking \"Purchase Flight\" button...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation details...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation ID is visible...\n"
+                    },
+                    {
+                      "text": "Verifying payment details...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-17T12:53:09.604Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b9db4802c80ff65570a6-7587ecdbd5ffb612d1da",
+          "file": "demo.js",
+          "line": 14,
+          "column": 1
+        }
+      ]
     },
     {
-      "message": "Error: No tests found",
-      "stack": "Error: No tests found"
+      "title": "demo1.js",
+      "file": "demo1.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Search and Reserve a Flight on BlazeDemo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 9324,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Verifying flights listing page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying flight entries are displayed...\n"
+                    },
+                    {
+                      "text": "Number of flights found: 5\n"
+                    },
+                    {
+                      "text": "Selecting the first available flight...\n"
+                    },
+                    {
+                      "text": "Verifying reservation page loaded...\n"
+                    },
+                    {
+                      "text": "Filling in passenger information...\n"
+                    },
+                    {
+                      "text": "Filling in payment information...\n"
+                    },
+                    {
+                      "text": "Clicking \"Purchase Flight\" button...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation details...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation ID is visible...\n"
+                    },
+                    {
+                      "text": "Verifying payment details...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-17T12:53:09.489Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3320ad7a2363d3ee1b9c-dae11a40ad969f456bb6",
+          "file": "demo1.js",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "demo2.js",
+      "file": "demo2.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Search and Reserve a Flight on BlazeDemo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 9669,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Verifying flights listing page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying flight entries are displayed...\n"
+                    },
+                    {
+                      "text": "Number of flights found: 5\n"
+                    },
+                    {
+                      "text": "Selecting the first available flight...\n"
+                    },
+                    {
+                      "text": "Verifying reservation page loaded...\n"
+                    },
+                    {
+                      "text": "Filling in passenger information...\n"
+                    },
+                    {
+                      "text": "Filling in payment information...\n"
+                    },
+                    {
+                      "text": "Clicking \"Purchase Flight\" button...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation page loaded...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation details...\n"
+                    },
+                    {
+                      "text": "Verifying confirmation ID is visible...\n"
+                    },
+                    {
+                      "text": "Verifying payment details...\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-17T12:53:09.540Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4e510de91a6770d0dfc7-ec5568c1aa334edf9220",
+          "file": "demo2.js",
+          "line": 14,
+          "column": 1
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2024-10-17T11:44:00.277Z",
-    "duration": 85.93499999999995,
-    "expected": 0,
+    "startTime": "2024-10-17T12:53:07.795Z",
+    "duration": 13259.365,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

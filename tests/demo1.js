@@ -7,9 +7,9 @@ const { PurchasePage } = require('../pages/PurchasePage');
 const { ConfirmationPage } = require('../pages/ConfirmationPage');
 
 // Import test data
-const flightData = require('../data/flightData.json');
-const passengerInfo = require('../data/passengerInfo.json');
-const paymentInfo = require('../data/paymentInfo.json');
+const flightData = require('../data/flightData1.json');
+const passengerInfo = require('../data/passengerInfo1.json');
+const paymentInfo = require('../data/paymentInfo1.json');
 
 test('Search and Reserve a Flight on BlazeDemo', async ({ page }) => {
   const { departureCity, destinationCity } = flightData;

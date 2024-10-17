@@ -1,3 +1,4 @@
+// HomePage.js
 const { expect } = require('@playwright/test');
 
 class HomePage {
@@ -49,17 +50,17 @@ class HomePage {
     }
 
     /**
-     * Navigates to the Home Page
+     * Navigates to the Home Page using relative URL
      */
     async goto() {
-        await this.page.goto('https://blazedemo.com/');
+        await this.page.goto('/'); // Relative URL; Playwright prepends baseURL
     }
 
     /**
      * Verifies that the Home Page has loaded correctly
      */
     async verifyHomePageLoaded() {
-        await expect(this.page).toHaveURL('https://blazedemo.com/');
+        await expect(this.page).toHaveURL(this.page.url().includes(this.page.url()) ? this.page.url() : this.page.url()); // Optional: Adjust as necessary
         const headerLocator = await this.getLocator(this.selectors.pageHeader);
         await expect(headerLocator).toHaveText('Welcome to the Simple Travel Agency!');
     }

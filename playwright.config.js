@@ -3,7 +3,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',            // Directory where tests are located
-  testMatch: '**/*demo.js',      // Matches test files
+  testMatch: '**/*demo*.js',      // Matches test files
   timeout: 30000,                // Max time one test can run for (30 sec)
   
   // Retry failed tests n times (helps in flaky environments)
@@ -53,7 +53,7 @@ module.exports = defineConfig({
     video: 'retain-on-failure',             // Record video only on test failures
     screenshot: 'only-on-failure',          // Take screenshots only on failure
     trace: 'on-first-retry',                // Capture traces on first retry, useful for debugging
-  //  baseURL: 'http://localhost:3000',       // Set a base URL for your application
+    baseURL: 'https://blazedemo.com',       // Set a base URL for your application
   },
 
   // Configure browser launch options
