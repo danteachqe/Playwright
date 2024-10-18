@@ -33,6 +33,7 @@ jobs:
       - name: Install Playwright browsers
         run: |
           npx playwright install
+        shell: bash
       - name: Set permissions for Playwright
         run: |
           chmod +x ./node_modules/.bin/playwright
@@ -41,6 +42,7 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /usr/bin
         run: |
           npx playwright test
+        shell: bash
 
   deploy-to-prod:
     runs-on: ubuntu-latest
