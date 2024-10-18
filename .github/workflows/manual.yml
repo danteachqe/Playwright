@@ -35,14 +35,10 @@ jobs:
           chmod +x ./node_modules/.bin/playwright
       - name: Install Playwright browsers
         run: |
-          npx playwright install --with-deps
-        shell: bash
+          npx playwright install chromium
       - name: Run Playwright tests
-        env:
-          PLAYWRIGHT_BROWSERS_PATH: /usr/bin
         run: |
           npx playwright test
-        shell: bash
 
   deploy-to-prod:
     runs-on: ubuntu-latest
