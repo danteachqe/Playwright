@@ -8,7 +8,7 @@ class PurchasePage {
   async verifyPurchasePageLoaded() {
     console.log('Verifying reservation page loaded...');
     await expect(this.page).toHaveURL('https://blazedemo.com/purchase.php');
-    await this.page.screenshot({ path: 'step9_reservation_page.png' });
+  //  await this.page.screenshot({ path: 'step9_reservation_page.png' });
   }
 
   async fillPassengerInfo(passengerInfo) {
@@ -18,7 +18,7 @@ class PurchasePage {
     await this.page.fill('input[name="city"]', passengerInfo.city);
     await this.page.fill('input[name="state"]', passengerInfo.state);
     await this.page.fill('input[name="zipCode"]', passengerInfo.zipCode);
-    await this.page.screenshot({ path: 'step11_passenger_info_filled.png' });
+  await this.page.screenshot({ path: 'step11_passenger_info_filled.png' });
   }
 
   async fillPaymentInfo(paymentInfo) {
@@ -27,13 +27,13 @@ class PurchasePage {
     await this.page.fill('input[name="creditCardMonth"]', paymentInfo.creditCardMonth);
     await this.page.fill('input[name="creditCardYear"]', paymentInfo.creditCardYear);
     await this.page.fill('input[name="nameOnCard"]', paymentInfo.nameOnCard);
-    await this.page.screenshot({ path: 'step12_payment_info_filled.png' });
+  //  await this.page.screenshot({ path: 'step12_payment_info_filled.png' });
   }
 
   async purchaseFlight() {
     console.log('Clicking "Purchase Flight" button...');
     await this.page.click('input[type="submit"]');
-    await this.page.screenshot({ path: 'step13_purchase_flight_clicked.png' });
+  //  await this.page.screenshot({ path: 'step13_purchase_flight_clicked.png' });
   }
 }
 
