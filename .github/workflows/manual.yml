@@ -1,5 +1,3 @@
-name: Simple Workflow
-
 on:
   push:
     branches:
@@ -27,13 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: |
           npm install
+      - name: Install Playwright browsers
+        run: |
+          npx playwright install --with-deps
       - name: Run Playwright tests
         run: |
           npx playwright test
