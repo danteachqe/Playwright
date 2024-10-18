@@ -1,12 +1,22 @@
+name: CI Pipeline
+
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  actions: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Build step
         run: |
           echo "Building..."
@@ -16,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Deploy step
         run: |
           echo "Deploying..."
@@ -25,15 +38,48 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Test step
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x' # Specify your Node.js version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Set File Permissions
         run: |
-          echo "Testing..."
-          sleep 5
+          # Example: Make all scripts in the 'scripts' directory executable
+          chmod +x ./scripts/*.sh
+          
+          # Example: Remove execute permissions from a specific file if needed
+          chmod -x ./path/to/non-executable-file.txt
+          
+          # Add additional chmod commands as necessary
+          # chmod +x ./another-script.sh
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report
 
   deploy-to-prod:
     runs-on: ubuntu-latest
     needs: test
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Deploy to Prod step
         run: |
           echo "Deploying to Production..."
