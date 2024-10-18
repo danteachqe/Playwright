@@ -44,7 +44,7 @@ module.exports = defineConfig({
     ['json', { outputFile: 'reports/test-results.json' }], // JSON report
     ['junit', { outputFile: 'reports/results.xml' }] // JUnit report for CI
   ],
-
+ 
   // Global configuration for tests
   use: {
     headless: true,                        // Run tests in headless mode (set to true in CI for faster execution)
