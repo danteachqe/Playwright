@@ -38,12 +38,12 @@ jobs:
           npx playwright install chromium
       - name: Run Playwright tests
         run: |
-          npx playwright test --reporter=dot,json --output=test-results
+          npx playwright test --reporter=dot,json,junit
       - name: Upload Playwright test results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: playwright-report/
+          path: test-results/
       - name: Upload Playwright test results
         uses: actions/upload-artifact@v3
         with:
