@@ -27,28 +27,32 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+
       - name: Install dependencies
         run: |
           npm install
+
       - name: Set executable permissions for Playwright
         run: |
           chmod +x ./node_modules/.bin/playwright
+
       - name: Install Playwright browsers
         run: |
           npx playwright install chromium
+
       - name: Run Playwright tests
         run: |
           npx playwright test --reporter=dot,json,junit
+
+      - name: List reports directory
+        run: ls -la reports/
+
       - name: Upload Playwright test results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: test-results/
-      - name: Upload Playwright test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: test-results/
+          path: reports/
+
       - name: Make results available for download
         run: |
           echo "Test results are available for download."
