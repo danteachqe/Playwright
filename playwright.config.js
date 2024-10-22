@@ -33,7 +33,7 @@ module.exports = defineConfig({
       name: 'Firefox',
       use: {
         ...devices['Desktop Firefox'],      // Use Firefox browser
-        headless: false,
+        headless: true,
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
