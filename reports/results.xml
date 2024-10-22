@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="32.164306">
-<testsuite name="demo.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="4.893" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="4.893">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="34.200987">
+<testsuite name="demo.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="7.87" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="7.87">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
@@ -18,8 +18,8 @@ Verifying payment details...
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo1.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="4.688" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="4.688">
+<testsuite name="demo1.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="7.913" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="7.913">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
@@ -37,8 +37,8 @@ Verifying payment details...
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="11.661" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="11.661">
+<testsuite name="demo.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="9.358" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="9.358">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
@@ -56,8 +56,8 @@ Verifying payment details...
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo1.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="9.972" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="9.972">
+<testsuite name="demo1.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Firefox" tests="1" failures="0" skipped="0" time="8.043" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="8.043">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
@@ -75,8 +75,8 @@ Verifying payment details...
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Edge" tests="1" failures="0" skipped="0" time="5.116" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="5.116">
+<testsuite name="demo.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Edge" tests="1" failures="0" skipped="0" time="5.549" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo.js" time="5.549">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
@@ -94,8 +94,8 @@ Verifying payment details...
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo1.js" timestamp="2024-10-18T16:21:30.239Z" hostname="Edge" tests="1" failures="0" skipped="0" time="5.475" errors="0">
-<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="5.475">
+<testsuite name="demo1.js" timestamp="2024-10-22T07:45:39.308Z" hostname="Edge" tests="1" failures="0" skipped="0" time="5.059" errors="0">
+<testcase name="Search and Reserve a Flight on BlazeDemo" classname="demo1.js" time="5.059">
 <system-out>
 <![CDATA[Verifying flights listing page loaded...
 Verifying flight entries are displayed...
