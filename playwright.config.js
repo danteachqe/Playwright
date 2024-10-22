@@ -1,76 +1,116 @@
-const { defineConfig, devices } = require('@playwright/test');
+name: CI Pipeline
 
-module.exports = defineConfig({
-  testDir: './tests',             // Directory where tests are located
-  testMatch: '**/*demo*.js',      // Matches test files
-  timeout: 300000,                 // Max time one test can run for (30 sec)
-  
-  // Retry failed tests n times (helps in flaky environments)
-  retries: 1,                     // Adjust based on your needs
+on:
+  push:
+    branches:
+      - main
 
-  // Run tests sequentially
-  workers: 2,                     // Run tests one after the other
+permissions:
+  contents: read
+  actions: write
+  id-token: write
 
-  // Ensure tests within a project run sequentiall
-  fullyParallel: false,           
-  
-  // Configure which browsers to run tests in
-  projects: [
-    {
-      name: 'Chrome',
-      use: {
-        ...devices['Desktop Chrome'],       // Use Chrome browser
-        headless: true,                     // Run in headless mode
-        viewport: { width: 1280, height: 720 },
-        ignoreHTTPSErrors: true,
-        video: 'retain-on-failure',
-        screenshot: 'only-on-failure',
-        trace: 'on-first-retry',
-        baseURL: 'https://blazedemo.com',
-      },
-    },
-    {
-      name: 'Firefox',
-      use: {
-        ...devices['Desktop Firefox'],      // Use Firefox browser
-        headless: true,
-        viewport: { width: 1280, height: 720 },
-        ignoreHTTPSErrors: true,
-        video: 'retain-on-failure',
-        screenshot: 'only-on-failure',
-        trace: 'on-first-retry',
-        baseURL: 'https://blazedemo.com',
-      },
-    },
-    {
-      name: 'Edge',
-      use: {
-        channel: 'msedge',                  // Use Microsoft Edge browser
-        headless: true,
-        viewport: { width: 1280, height: 720 },
-        ignoreHTTPSErrors: true,
-        video: 'retain-on-failure',
-        screenshot: 'only-on-failure',
-        trace: 'on-first-retry',
-        baseURL: 'https://blazedemo.com',
-      },
-    },
-  ],
-  
-  // Test reporters (console, HTML, JSON, etc.)
-  reporter: [
-    ['list'],                                  // Console reporter
-    ['html', { outputFolder: 'reports/html' }],// HTML report
-    ['json', { outputFile: 'reports/test-results.json' }], // JSON report
-    ['junit', { outputFile: 'reports/results.xml' }],      // JUnit report
-  ],
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-  // Global test configuration (if not specified in 'use' of projects)
-  // Removed duplicate 'use' options since they are specified per project
+      - name: Build step
+        run: |
+          echo "Building..."
+          sleep 5
 
-  // Disallow 'test.only' in CI environments
-  forbidOnly: !!process.env.CI,              
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-  // Keep test artifacts (screenshots, traces) always
-  preserveOutput: 'always',                 
-});
+      - name: Deploy step
+        run: |
+          echo "Deploying..."
+          sleep 5
+
+  test:
+    runs-on: ubuntu-latest
+    needs: deploy
+    strategy:
+      matrix:
+        shard: [1, 2, 3]  # Define 3 shards
+    name: Test Shard ${{ matrix.shard }} of 3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'  # Specify your Node.js version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests with sharding
+        run: |
+          echo "Running tests for shard ${{ matrix.shard }} of 3"
+          npx playwright test --shard=${{ matrix.shard }}/3
+
+      - name: Upload Playwright HTML Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-html-report-shard-${{ matrix.shard }}
+          path: reports/html
+
+      - name: Upload Playwright JSON Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-json-report-shard-${{ matrix.shard }}
+          path: reports/test-results.json
+
+      - name: Upload Playwright JUnit Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-junit-report-shard-${{ matrix.shard }}
+          path: reports/results.xml
+
+      - name: Upload Screenshots (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-screenshots-shard-${{ matrix.shard }}
+          path: screenshots/
+
+      - name: Upload Videos (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-videos-shard-${{ matrix.shard }}
+          path: videos/
+
+      - name: Upload Traces (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-traces-shard-${{ matrix.shard }}
+          path: traces/
+
+  deploy-to-prod:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Prod step
+        run: |
+          echo "Deploying to Production..."
+          sleep 5
