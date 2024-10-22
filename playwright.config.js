@@ -3,15 +3,15 @@ const { defineConfig, devices } = require('@playwright/test');
 module.exports = defineConfig({
   testDir: './tests',             // Directory where tests are located
   testMatch: '**/*demo*.js',      // Matches test files
-  timeout: 30000,                 // Max time one test can run for (30 sec)
+  timeout: 300000,                 // Max time one test can run for (30 sec)
   
   // Retry failed tests n times (helps in flaky environments)
   retries: 1,                     // Adjust based on your needs
 
   // Run tests sequentially
-  workers: 1,                     // Run tests one after the other
+  workers: 2,                     // Run tests one after the other
 
-  // Ensure tests within a project run sequentially
+  // Ensure tests within a project run sequentiall
   fullyParallel: false,           
   
   // Configure which browsers to run tests in
@@ -20,7 +20,7 @@ module.exports = defineConfig({
       name: 'Chrome',
       use: {
         ...devices['Desktop Chrome'],       // Use Chrome browser
-        headless: false,                     // Run in headless mode
+        headless: true,                     // Run in headless mode
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',

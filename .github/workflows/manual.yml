@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write  # Adjusted if necessary
   actions: write
   id-token: write
 
@@ -44,7 +44,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x' # Specify your Node.js version
+          node-version: '18.x' # Specify your Node.js version
 
       - name: Install dependencies
         run: npm ci
@@ -52,16 +52,13 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      - name: List Scripts Directory (Debugging)
+        run: ls -la ./scripts/
+
       - name: Set File Permissions
         run: |
-          # Example: Make all scripts in the 'scripts' directory executable
           chmod +x ./scripts/*.sh
-          
-          # Example: Remove execute permissions from a specific file if needed
           chmod -x ./path/to/non-executable-file.txt
-          
-          # Add additional chmod commands as necessary
-          # chmod +x ./another-script.sh
 
       - name: Run Playwright tests
         run: npx playwright test

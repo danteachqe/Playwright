@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -56,7 +56,7 @@
         "testMatch": [
           "**/*demo*.js"
         ],
-        "timeout": 30000
+        "timeout": 300000
       },
       {
         "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
@@ -70,7 +70,7 @@
         "testMatch": [
           "**/*demo*.js"
         ],
-        "timeout": 30000
+        "timeout": 300000
       },
       {
         "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
@@ -84,13 +84,13 @@
         "testMatch": [
           "**/*demo*.js"
         ],
-        "timeout": 30000
+        "timeout": 300000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.48.0",
-    "workers": 1,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
@@ -106,7 +106,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Chrome",
@@ -115,7 +115,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4638,
+                  "duration": 4893,
                   "errors": [],
                   "stdout": [
                     {
@@ -157,7 +157,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:13.578Z",
+                  "startTime": "2024-10-18T16:21:31.823Z",
                   "attachments": []
                 }
               ],
@@ -175,16 +175,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Firefox",
               "projectName": "Firefox",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 2,
                   "status": "passed",
-                  "duration": 6581,
+                  "duration": 11661,
                   "errors": [],
                   "stdout": [
                     {
@@ -226,7 +226,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:24.580Z",
+                  "startTime": "2024-10-18T16:21:38.650Z",
                   "attachments": []
                 }
               ],
@@ -244,16 +244,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Edge",
               "projectName": "Edge",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 4,
                   "status": "passed",
-                  "duration": 4186,
+                  "duration": 5116,
                   "errors": [],
                   "stdout": [
                     {
@@ -295,7 +295,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:38.716Z",
+                  "startTime": "2024-10-18T16:21:54.067Z",
                   "attachments": []
                 }
               ],
@@ -321,16 +321,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Chrome",
               "projectName": "Chrome",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 4092,
+                  "duration": 4688,
                   "errors": [],
                   "stdout": [
                     {
@@ -372,7 +372,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:18.724Z",
+                  "startTime": "2024-10-18T16:21:31.792Z",
                   "attachments": []
                 }
               ],
@@ -390,16 +390,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Firefox",
               "projectName": "Firefox",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "status": "passed",
-                  "duration": 4711,
+                  "duration": 9972,
                   "errors": [],
                   "stdout": [
                     {
@@ -441,7 +441,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:32.338Z",
+                  "startTime": "2024-10-18T16:21:38.777Z",
                   "attachments": []
                 }
               ],
@@ -459,16 +459,16 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 300000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "Edge",
               "projectName": "Edge",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 5,
                   "status": "passed",
-                  "duration": 3546,
+                  "duration": 5475,
                   "errors": [],
                   "stdout": [
                     {
@@ -510,7 +510,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-18T16:09:43.557Z",
+                  "startTime": "2024-10-18T16:21:54.540Z",
                   "attachments": []
                 }
               ],
@@ -527,8 +527,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-18T16:09:12.661Z",
-    "duration": 34975.911,
+    "startTime": "2024-10-18T16:21:30.099Z",
+    "duration": 32164.306,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,
