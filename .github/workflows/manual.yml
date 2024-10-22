@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # Adjusted if necessary
+  contents: read
   actions: write
   id-token: write
 
@@ -51,14 +51,6 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-
-      - name: List Scripts Directory (Debugging)
-        run: ls -la ./scripts/
-
-      - name: Set File Permissions
-        run: |
-          chmod +x ./scripts/*.sh
-          chmod -x ./path/to/non-executable-file.txt
 
       - name: Run Playwright tests
         run: npx playwright test
