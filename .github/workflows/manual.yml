@@ -61,12 +61,47 @@ jobs:
           echo "Running tests for shard ${{ matrix.shard }} of 3"
           npx playwright test --shard=${{ matrix.shard }}/3
 
-      - name: Upload test artifacts
+      - name: Upload Playwright HTML Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-html-report-shard-${{ matrix.shard }}
+          path: reports/html
+
+      - name: Upload Playwright JSON Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-json-report-shard-${{ matrix.shard }}
+          path: reports/test-results.json
+
+      - name: Upload Playwright JUnit Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-junit-report-shard-${{ matrix.shard }}
+          path: reports/results.xml
+
+      - name: Upload Screenshots (if any)
         if: failure()
         uses: actions/upload-artifact@v3
         with:
-          name: playwright-report-shard-${{ matrix.shard }}
-          path: playwright-report
+          name: playwright-screenshots-shard-${{ matrix.shard }}
+          path: screenshots/
+
+      - name: Upload Videos (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-videos-shard-${{ matrix.shard }}
+          path: videos/
+
+      - name: Upload Traces (if any)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-traces-shard-${{ matrix.shard }}
+          path: traces/
 
   deploy-to-prod:
     runs-on: ubuntu-latest
