@@ -9,7 +9,7 @@ module.exports = defineConfig({
   retries: 1,                     // Adjust based on your needs
 
   // Run tests sequentially
-  workers: 2,                     // Run tests one after the other
+  workers: 1,                     // Run tests one after the other
 
   // Ensure tests within a project run sequentiall
   fullyParallel: false,           
