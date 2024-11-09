@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,42 +47,70 @@
       {
         "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Chrome",
         "name": "Chrome",
         "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "**/*demo*.js"
+          "**/*demo_*.js"
         ],
         "timeout": 300000
       },
       {
         "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Firefox",
         "name": "Firefox",
         "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "**/*demo*.js"
+          "**/*demo_*.js"
         ],
         "timeout": 300000
       },
       {
         "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Edge",
         "name": "Edge",
         "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "**/*demo*.js"
+          "**/*demo_*.js"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Android",
+        "name": "Android",
+        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*demo_*.js"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "iPhone",
+        "name": "iPhone",
+        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*demo_*.js"
         ],
         "timeout": 300000
       }
@@ -90,18 +118,18 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.48.0",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "demo.js",
-      "file": "demo.js",
+      "title": "demo_clock.js",
+      "file": "demo_clock.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Search and Reserve a Flight on BlazeDemo",
+          "title": "Search and Reserve a Flight on BlazeDemo with Clock Manipulation",
           "ok": true,
           "tags": [],
           "tests": [
@@ -111,80 +139,11 @@
               "expectedStatus": "passed",
               "projectId": "Chrome",
               "projectName": "Chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 6267,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-22T07:50:54.359Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b9db4802c80ff65570a6-91680a1348f18b419429",
-          "file": "demo.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Firefox",
-              "projectName": "Firefox",
               "results": [
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 28323,
+                  "duration": 5518,
                   "errors": [],
                   "stdout": [
                     {
@@ -209,73 +168,16 @@
                       "text": "Filling in payment information...\n"
                     },
                     {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
+                      "text": "Time before fast-forward: 2024-11-09T11:33:33.025Z\n"
                     },
                     {
-                      "text": "Verifying confirmation page loaded...\n"
+                      "text": "Fast-forwarding time by 3 minutes...\n"
                     },
                     {
-                      "text": "Verifying confirmation details...\n"
+                      "text": "Time after fast-forward: 2024-11-09T11:36:33.128Z\n"
                     },
                     {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-22T07:51:02.867Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "b9db4802c80ff65570a6-5f11748129fa2de80543",
-          "file": "demo.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Edge",
-              "projectName": "Edge",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 6233,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
+                      "text": "Fast-forwarded time difference: 180.103 seconds\n"
                     },
                     {
                       "text": "Clicking \"Purchase Flight\" button...\n"
@@ -295,231 +197,16 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-10-22T07:51:35.169Z",
+                  "startTime": "2024-11-09T11:33:28.184Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "b9db4802c80ff65570a6-deb1dfb870a04ea26fcf",
-          "file": "demo.js",
-          "line": 14,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "demo1.js",
-      "file": "demo1.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Chrome",
-              "projectName": "Chrome",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 5472,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-22T07:50:54.330Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3320ad7a2363d3ee1b9c-66d73165cc7c611352c2",
-          "file": "demo1.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Firefox",
-              "projectName": "Firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 28200,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-22T07:51:03.308Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3320ad7a2363d3ee1b9c-dfff29fa111d4e8c2b5c",
-          "file": "demo1.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Search and Reserve a Flight on BlazeDemo",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Edge",
-              "projectName": "Edge",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 3996,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Verifying flights listing page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying flight entries are displayed...\n"
-                    },
-                    {
-                      "text": "Number of flights found: 5\n"
-                    },
-                    {
-                      "text": "Selecting the first available flight...\n"
-                    },
-                    {
-                      "text": "Verifying reservation page loaded...\n"
-                    },
-                    {
-                      "text": "Filling in passenger information...\n"
-                    },
-                    {
-                      "text": "Filling in payment information...\n"
-                    },
-                    {
-                      "text": "Clicking \"Purchase Flight\" button...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation page loaded...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation details...\n"
-                    },
-                    {
-                      "text": "Verifying confirmation ID is visible...\n"
-                    },
-                    {
-                      "text": "Verifying payment details...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-10-22T07:51:37.229Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "3320ad7a2363d3ee1b9c-3c705eed6bdeb1ff517a",
-          "file": "demo1.js",
-          "line": 14,
+          "id": "c140f2bc9cb4df16a320-8acff6991a087897467a",
+          "file": "demo_clock.js",
+          "line": 12,
           "column": 1
         }
       ]
@@ -527,9 +214,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-10-22T07:50:52.444Z",
-    "duration": 49598.728,
-    "expected": 6,
+    "startTime": "2024-11-09T11:33:26.424Z",
+    "duration": 8395.660000000033,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
