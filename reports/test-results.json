@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Cursuri\\CURSURI\\AI__OPENAI\\Playwright\\Playwright\\playwright.config.js",
-    "rootDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+    "configFile": "C:\\Cursuri\\Code\\Playwright\\playwright.config.js",
+    "rootDir": "C:/Cursuri/Code/Playwright/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -43,13 +45,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Chrome",
         "name": "Chrome",
-        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testDir": "C:/Cursuri/Code/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*demo_ai*.js"
@@ -57,13 +59,13 @@
         "timeout": 300000
       },
       {
-        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Firefox",
         "name": "Firefox",
-        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testDir": "C:/Cursuri/Code/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*demo_ai*.js"
@@ -71,13 +73,13 @@
         "timeout": 300000
       },
       {
-        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Edge",
         "name": "Edge",
-        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testDir": "C:/Cursuri/Code/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*demo_ai*.js"
@@ -85,13 +87,13 @@
         "timeout": 300000
       },
       {
-        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Android",
         "name": "Android",
-        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testDir": "C:/Cursuri/Code/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*demo_ai*.js"
@@ -99,13 +101,13 @@
         "timeout": 300000
       },
       {
-        "outputDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/test-results",
+        "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "iPhone",
         "name": "iPhone",
-        "testDir": "C:/Cursuri/CURSURI/AI__OPENAI/Playwright/Playwright/tests",
+        "testDir": "C:/Cursuri/Code/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*demo_ai*.js"
@@ -119,19 +121,99 @@
     "workers": 1,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: No tests found",
-      "stack": "Error: No tests found"
+      "title": "demo_ai_incorporation.js",
+      "file": "demo_ai_incorporation.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlazeDemo Flight Booking",
+          "file": "demo_ai_incorporation.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "book a flight from Boston to New York",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chrome",
+                  "projectName": "Chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "failed",
+                      "duration": 1505,
+                      "error": {
+                        "value": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
+                      },
+                      "errors": [
+                        {
+                          "message": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 1
+                        },
+                        {
+                          "title": "zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5",
+                          "duration": 1,
+                          "error": {
+                            "value": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-01-14T07:45:50.272Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dc42b7d78f97444e303e-5c291603b19f1e6c6083",
+              "file": "demo_ai_incorporation.js",
+              "line": 5,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2024-11-28T12:05:13.803Z",
-    "duration": 44.06499999999994,
+    "startTime": "2025-01-14T07:45:48.856Z",
+    "duration": 3357.051999999967,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

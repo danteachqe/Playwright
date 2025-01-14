@@ -1,2 +1,31 @@
-<testsuites id="" name="" tests="0" failures="0" skipped="0" errors="0" time="0.04406499999999994">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="3.357051999999967">
+<testsuite name="demo_ai_incorporation.js" timestamp="2025-01-14T07:45:49.598Z" hostname="Chrome" tests="1" failures="1" skipped="0" time="1.505" errors="0">
+<testcase name="BlazeDemo Flight Booking › book a flight from Boston to New York" classname="demo_ai_incorporation.js" time="1.505">
+<failure message="demo_ai_incorporation.js:5:7 book a flight from Boston to New York" type="FAILURE">
+<![CDATA[  [Chrome] › demo_ai_incorporation.js:5:7 › BlazeDemo Flight Booking › book a flight from Boston to New York › zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5 
+
+    `zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    Playwright\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    Playwright\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\video.webm]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5
+]]>
+</system-err>
+</testcase>
+</testsuite>
 </testsuites>

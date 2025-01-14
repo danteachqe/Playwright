@@ -1,55 +1,30 @@
-const { chromium } = require('playwright');
+import { test, expect } from '@playwright/test';
+import { ai } from '@zerostep/playwright';
 
-(async () => {
-  // Launch browser
-  const browser = await chromium.launch({ headless: false });
-  const page = await browser.newPage();
+test.describe('BlazeDemo Flight Booking', () => {
+  test('book a flight from Boston to New York', async ({ page }) => {
+    await page.goto('http://blazedemo.com');
 
-  // Navigate to BlazeDemo
-  await page.goto('http://blazedemo.com');
+    // Step 1: Select departure city as Boston
+    await ai('Select "Boston" from the departure city dropdown', { page, test });
 
-  // Select departure and destination cities
-  await page.selectOption('select[name="fromPort"]', 'Boston');
-  await page.selectOption('select[name="toPort"]', 'New York');
+    // Step 2: Select destination city as New York
+    await ai('Select "New York" from the destination city dropdown', { page, test });
 
-  // Find flights
-  await page.click('input[type="submit"]');
+    // Step 3: Click the button to find flights
+    await ai('Click the Find Flights button', { page, test });
 
-  // Wait for the results page to load
-  await page.waitForSelector('table');
+    // Step 4: Wait for the flight results and choose the first flight
+    await ai('Select the first flight from the results table', { page, test });
 
-  // Choose the first flight
-  await page.click('table tr:nth-child(2) input[type="submit"]');
+    // Step 5: Fill in passenger details
+    await ai('Enter passenger details with realistic values', { page, test });
 
-  // Wait for the purchase page to load
-  await page.waitForSelector('h2');
+    // Step 6: Confirm the purchase
+    await ai('Click the Purchase button', { page, test });
 
-  // Fill in passenger details
-  await page.fill('input[name="inputName"]', 'John Doe');
-  await page.fill('input[name="address"]', '123 Main St');
-  await page.fill('input[name="city"]', 'Anytown');
-  await page.fill('input[name="state"]', 'Anystate');
-  await page.fill('input[name="zipCode"]', '12345');
-  await page.selectOption('select[name="cardType"]', 'visa');
-  await page.fill('input[name="creditCardNumber"]', '4111111111111111');
-  await page.fill('input[name="creditCardMonth"]', '12');
-  await page.fill('input[name="creditCardYear"]', '2023');
-  await page.fill('input[name="nameOnCard"]', 'John Doe');
-
-  // Purchase the flight
-  await page.click('input[type="submit"]');
-
-  // Wait for the confirmation page to load
-  await page.waitForSelector('h1');
-
-  // Verify the confirmation message
-  const confirmationMessage = await page.textContent('h1');
-  if (confirmationMessage === 'Thank you for your purchase today!') {
-    console.log('Test passed: Purchase confirmed.');
-  } else {
-    console.log('Test failed: Purchase not confirmed.');
-  }
-
-  // Close browser
-  await browser.close();
-})();
+    // Step 7: Verify the confirmation message
+    const confirmationMessage = await page.getByText('Thank you for your purchase today!');
+    expect(confirmationMessage).toBeDefined();
+  });
+});
