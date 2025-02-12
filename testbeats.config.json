@@ -1,0 +1,10 @@
+{
+    "api_key": "3503c76c502340109e2d117d647fd57d",
+    
+    "results": [
+      {
+        "type": "junit",
+        "files": ["reports/results.xml"]
+      }
+    ]
+  }

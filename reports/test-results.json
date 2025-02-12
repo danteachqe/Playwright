@@ -47,7 +47,7 @@
       {
         "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "Chrome",
         "name": "Chrome",
@@ -61,7 +61,7 @@
       {
         "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "Firefox",
         "name": "Firefox",
@@ -75,7 +75,7 @@
       {
         "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "Edge",
         "name": "Edge",
@@ -89,7 +89,7 @@
       {
         "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "Android",
         "name": "Android",
@@ -103,7 +103,7 @@
       {
         "outputDir": "C:/Cursuri/Code/Playwright/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "iPhone",
         "name": "iPhone",
@@ -117,27 +117,27 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.48.0",
+    "version": "1.49.1",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "demo_ai_incorporation.js",
-      "file": "demo_ai_incorporation.js",
+      "title": "demo_ai.js",
+      "file": "demo_ai.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "BlazeDemo Flight Booking",
-          "file": "demo_ai_incorporation.js",
-          "line": 4,
+          "file": "demo_ai.js",
+          "line": 15,
           "column": 6,
           "specs": [
             {
-              "title": "book a flight from Boston to New York",
-              "ok": false,
+              "title": "Search and Reserve a Flight on BlazeDemo",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -148,48 +148,184 @@
                   "projectName": "Chrome",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "status": "failed",
-                      "duration": 1505,
-                      "error": {
-                        "value": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
-                      },
-                      "errors": [
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 25635,
+                      "errors": [],
+                      "stdout": [
                         {
-                          "message": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
+                          "text": "Verifying flights listing page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying flight entries are displayed...\n"
+                        },
+                        {
+                          "text": "Number of flights found: 5\n"
+                        },
+                        {
+                          "text": "Selecting the first available flight...\n"
+                        },
+                        {
+                          "text": "Verifying reservation page loaded...\n"
+                        },
+                        {
+                          "text": "Filling in passenger information...\n"
+                        },
+                        {
+                          "text": "Filling in payment information...\n"
+                        },
+                        {
+                          "text": "Clicking \"Purchase Flight\" button...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation details...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation ID is visible...\n"
+                        },
+                        {
+                          "text": "Verifying payment details...\n"
                         }
                       ],
-                      "stdout": [],
-                      "stderr": [
-                        {
-                          "text": "zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5\n"
-                        }
-                      ],
+                      "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
-                          "duration": 1
+                          "duration": 1662,
+                          "steps": [
+                            {
+                              "title": "zerostep.action input",
+                              "duration": 159
+                            }
+                          ]
                         },
                         {
-                          "title": "zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5",
-                          "duration": 1,
+                          "title": "zerostep.ai 'Select \"New York\" from the destination city dropdown'",
+                          "duration": 719
+                        },
+                        {
+                          "title": "zerostep.action input",
+                          "duration": 105
+                        },
+                        {
+                          "title": "zerostep.ai 'Click the Find Flights button'",
+                          "duration": 1555
+                        },
+                        {
+                          "title": "zerostep.action click",
+                          "duration": 931
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:44:04.867Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b671f4680283ed5e1f3b-9062faac61c03ab66299",
+              "file": "demo_ai.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "Search and Reserve a Flight on BlazeDemo",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Firefox",
+                  "projectName": "Firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 3445,
+                      "error": {
+                        "message": "Error: The ai() function can only be run against Chromium browsers.",
+                        "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: The ai() function can only be run against Chromium browsers.\n\u001b[2m    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\u001b[22m\n\u001b[2m    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\u001b[22m\n\u001b[2m    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\u001b[22m\n\u001b[2m    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\u001b[22m\n\u001b[2m    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 21,
                           "error": {
-                            "value": "`zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a \"TOKEN\" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`"
+                            "message": "Error: The ai() function can only be run against Chromium browsers.",
+                            "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
                           }
                         }
                       ],
-                      "startTime": "2025-01-14T07:45:50.272Z",
+                      "startTime": "2025-02-12T13:44:36.752Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\\test-failed-1.png"
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\\test-failed-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\\video.webm"
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\\video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 2,
+                      "status": "failed",
+                      "duration": 3270,
+                      "error": {
+                        "message": "Error: The ai() function can only be run against Chromium browsers.",
+                        "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: The ai() function can only be run against Chromium browsers.\n\u001b[2m    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\u001b[22m\n\u001b[2m    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\u001b[22m\n\u001b[2m    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\u001b[22m\n\u001b[2m    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\u001b[22m\n\u001b[2m    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 21,
+                          "error": {
+                            "message": "Error: The ai() function can only be run against Chromium browsers.",
+                            "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:44:46.621Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\\trace.zip"
                         }
                       ]
                     }
@@ -197,10 +333,310 @@
                   "status": "unexpected"
                 }
               ],
-              "id": "dc42b7d78f97444e303e-5c291603b19f1e6c6083",
-              "file": "demo_ai_incorporation.js",
-              "line": 5,
-              "column": 7
+              "id": "b671f4680283ed5e1f3b-658fbee01c4135a1a856",
+              "file": "demo_ai.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "Search and Reserve a Flight on BlazeDemo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Edge",
+                  "projectName": "Edge",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 21673,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Verifying flights listing page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying flight entries are displayed...\n"
+                        },
+                        {
+                          "text": "Number of flights found: 5\n"
+                        },
+                        {
+                          "text": "Selecting the first available flight...\n"
+                        },
+                        {
+                          "text": "Verifying reservation page loaded...\n"
+                        },
+                        {
+                          "text": "Filling in passenger information...\n"
+                        },
+                        {
+                          "text": "Filling in payment information...\n"
+                        },
+                        {
+                          "text": "Clicking \"Purchase Flight\" button...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation details...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation ID is visible...\n"
+                        },
+                        {
+                          "text": "Verifying payment details...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 1430,
+                          "steps": [
+                            {
+                              "title": "zerostep.action input",
+                              "duration": 123
+                            }
+                          ]
+                        },
+                        {
+                          "title": "zerostep.ai 'Select \"New York\" from the destination city dropdown'",
+                          "duration": 669
+                        },
+                        {
+                          "title": "zerostep.action input",
+                          "duration": 129
+                        },
+                        {
+                          "title": "zerostep.ai 'Click the Find Flights button'",
+                          "duration": 1379
+                        },
+                        {
+                          "title": "zerostep.action click",
+                          "duration": 636
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:44:51.776Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b671f4680283ed5e1f3b-1ec0fa8d4333273e60d5",
+              "file": "demo_ai.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "Search and Reserve a Flight on BlazeDemo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Android",
+                  "projectName": "Android",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 27438,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Verifying flights listing page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying flight entries are displayed...\n"
+                        },
+                        {
+                          "text": "Number of flights found: 5\n"
+                        },
+                        {
+                          "text": "Selecting the first available flight...\n"
+                        },
+                        {
+                          "text": "Verifying reservation page loaded...\n"
+                        },
+                        {
+                          "text": "Filling in passenger information...\n"
+                        },
+                        {
+                          "text": "Filling in payment information...\n"
+                        },
+                        {
+                          "text": "Clicking \"Purchase Flight\" button...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation page loaded...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation details...\n"
+                        },
+                        {
+                          "text": "Verifying confirmation ID is visible...\n"
+                        },
+                        {
+                          "text": "Verifying payment details...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 1651,
+                          "steps": [
+                            {
+                              "title": "zerostep.action input",
+                              "duration": 97
+                            }
+                          ]
+                        },
+                        {
+                          "title": "zerostep.ai 'Select \"New York\" from the destination city dropdown'",
+                          "duration": 871
+                        },
+                        {
+                          "title": "zerostep.action input",
+                          "duration": 101
+                        },
+                        {
+                          "title": "zerostep.ai 'Click the Find Flights button'",
+                          "duration": 1916
+                        },
+                        {
+                          "title": "zerostep.action click",
+                          "duration": 1237
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:45:14.773Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b671f4680283ed5e1f3b-7a72c42eca5d47e4c1d1",
+              "file": "demo_ai.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "Search and Reserve a Flight on BlazeDemo",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "iPhone",
+                  "projectName": "iPhone",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "failed",
+                      "duration": 1955,
+                      "error": {
+                        "message": "Error: The ai() function can only be run against Chromium browsers.",
+                        "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: The ai() function can only be run against Chromium browsers.\n\u001b[2m    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\u001b[22m\n\u001b[2m    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\u001b[22m\n\u001b[2m    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\u001b[22m\n\u001b[2m    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\u001b[22m\n\u001b[2m    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 13,
+                          "error": {
+                            "message": "Error: The ai() function can only be run against Chromium browsers.",
+                            "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:45:43.398Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\\video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 6,
+                      "status": "failed",
+                      "duration": 3165,
+                      "error": {
+                        "message": "Error: The ai() function can only be run against Chromium browsers.",
+                        "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: The ai() function can only be run against Chromium browsers.\n\u001b[2m    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\u001b[22m\n\u001b[2m    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\u001b[22m\n\u001b[2m    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\u001b[22m\n\u001b[2m    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\u001b[22m\n\u001b[2m    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "steps": [
+                        {
+                          "title": "zerostep.ai 'Select \"Boston\" from the departure city dropdown'",
+                          "duration": 18,
+                          "error": {
+                            "message": "Error: The ai() function can only be run against Chromium browsers.",
+                            "stack": "Error: The ai() function can only be run against Chromium browsers.\n    at getCDPSession (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:27:13)\n    at Object.getDOMSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\cdp.ts:111:22)\n    at Object.getSnapshot (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\playwright.ts:181:7)\n    at sendTaskStartMessage (C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:105:20)\n    at C:\\Cursuri\\Code\\Playwright\\node_modules\\@zerostep\\playwright\\src\\index.ts:47:7"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-02-12T13:45:46.642Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Cursuri\\Code\\Playwright\\test-results\\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b671f4680283ed5e1f3b-da3bf84495f9f35b12f0",
+              "file": "demo_ai.js",
+              "line": 16,
+              "column": 3
             }
           ]
         }
@@ -209,11 +645,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-14T07:45:48.856Z",
-    "duration": 3357.051999999967,
-    "expected": 0,
+    "startTime": "2025-02-12T13:44:04.099Z",
+    "duration": 105858.063,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 2,
     "flaky": 0
   }
 }

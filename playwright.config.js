@@ -86,7 +86,7 @@ module.exports = defineConfig({
     ['list'], // Console reporter
     ['html', { outputFolder: 'reports/html' }], // HTML report
     ['json', { outputFile: 'reports/test-results.json' }], // JSON report
-    ['junit', { outputFile: 'reports/results.xml' }], // JUnit report
+    ['junit', { outputFile: 'test-results/junit.xml' }], // JUnit report
   ],
 
   // Disallow 'test.only' in CI environments
@@ -95,3 +95,4 @@ module.exports = defineConfig({
   // Keep test artifacts (screenshots, traces) always
   preserveOutput: 'always',
 });
+ // 

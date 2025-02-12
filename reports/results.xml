@@ -1,31 +1,181 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="3.357051999999967">
-<testsuite name="demo_ai_incorporation.js" timestamp="2025-01-14T07:45:49.598Z" hostname="Chrome" tests="1" failures="1" skipped="0" time="1.505" errors="0">
-<testcase name="BlazeDemo Flight Booking › book a flight from Boston to New York" classname="demo_ai_incorporation.js" time="1.505">
-<failure message="demo_ai_incorporation.js:5:7 book a flight from Boston to New York" type="FAILURE">
-<![CDATA[  [Chrome] › demo_ai_incorporation.js:5:7 › BlazeDemo Flight Booking › book a flight from Boston to New York › zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5 
+<testsuites id="" name="" tests="5" failures="2" skipped="0" errors="0" time="105.858063">
+<testsuite name="demo_ai.js" timestamp="2025-02-12T13:44:04.169Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="25.635" errors="0">
+<testcase name="BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo" classname="demo_ai.js" time="25.635">
+<system-out>
+<![CDATA[Verifying flights listing page loaded...
+Verifying flight entries are displayed...
+Number of flights found: 5
+Selecting the first available flight...
+Verifying reservation page loaded...
+Filling in passenger information...
+Filling in payment information...
+Clicking "Purchase Flight" button...
+Verifying confirmation page loaded...
+Verifying confirmation details...
+Verifying confirmation ID is visible...
+Verifying payment details...
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="demo_ai.js" timestamp="2025-02-12T13:44:04.169Z" hostname="Firefox" tests="1" failures="1" skipped="0" time="6.715" errors="0">
+<testcase name="BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo" classname="demo_ai.js" time="6.715">
+<failure message="demo_ai.js:16:3 Search and Reserve a Flight on BlazeDemo" type="FAILURE">
+<![CDATA[  [Firefox] › demo_ai.js:16:3 › BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo › zerostep.ai 'Select "Boston" from the departure city dropdown' 
 
-    `zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5`
+    Error: The ai() function can only be run against Chromium browsers.
+        at getCDPSession (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:27:13)
+        at Object.getDOMSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:111:22)
+        at Object.getSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\playwright.ts:181:7)
+        at sendTaskStartMessage (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:105:20)
+        at C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:47:7
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    Playwright\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\test-failed-1.png
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    Playwright\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\video.webm
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: The ai() function can only be run against Chromium browsers.
+        at getCDPSession (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:27:13)
+        at Object.getDOMSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:111:22)
+        at Object.getSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\playwright.ts:181:7)
+        at sendTaskStartMessage (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:105:20)
+        at C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:47:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\trace.zip
+
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|..\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\test-failed-1.png]]
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\test-failed-1.png]]
 
-[[ATTACHMENT|..\test-results\demo_ai_incorporation.js-B-a63fa-ght-from-Boston-to-New-York-Chrome\video.webm]]
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox\video.webm]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\video.webm]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-Firefox-retry1\trace.zip]]
 ]]>
 </system-out>
-<system-err>
-<![CDATA[zerostep.error 'The $ZEROSTEP_TOKEN environment variable or a zerostep.config.json file with a "TOKEN" field must be defined to execute ai steps. You can find your token or sign up for an account at https://app.zerostep.com'. Version:v0.1.5
+</testcase>
+</testsuite>
+<testsuite name="demo_ai.js" timestamp="2025-02-12T13:44:04.169Z" hostname="Edge" tests="1" failures="0" skipped="0" time="21.673" errors="0">
+<testcase name="BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo" classname="demo_ai.js" time="21.673">
+<system-out>
+<![CDATA[Verifying flights listing page loaded...
+Verifying flight entries are displayed...
+Number of flights found: 5
+Selecting the first available flight...
+Verifying reservation page loaded...
+Filling in passenger information...
+Filling in payment information...
+Clicking "Purchase Flight" button...
+Verifying confirmation page loaded...
+Verifying confirmation details...
+Verifying confirmation ID is visible...
+Verifying payment details...
 ]]>
-</system-err>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="demo_ai.js" timestamp="2025-02-12T13:44:04.169Z" hostname="Android" tests="1" failures="0" skipped="0" time="27.438" errors="0">
+<testcase name="BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo" classname="demo_ai.js" time="27.438">
+<system-out>
+<![CDATA[Verifying flights listing page loaded...
+Verifying flight entries are displayed...
+Number of flights found: 5
+Selecting the first available flight...
+Verifying reservation page loaded...
+Filling in passenger information...
+Filling in payment information...
+Clicking "Purchase Flight" button...
+Verifying confirmation page loaded...
+Verifying confirmation details...
+Verifying confirmation ID is visible...
+Verifying payment details...
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="demo_ai.js" timestamp="2025-02-12T13:44:04.169Z" hostname="iPhone" tests="1" failures="1" skipped="0" time="5.12" errors="0">
+<testcase name="BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo" classname="demo_ai.js" time="5.12">
+<failure message="demo_ai.js:16:3 Search and Reserve a Flight on BlazeDemo" type="FAILURE">
+<![CDATA[  [iPhone] › demo_ai.js:16:3 › BlazeDemo Flight Booking › Search and Reserve a Flight on BlazeDemo › zerostep.ai 'Select "Boston" from the departure city dropdown' 
+
+    Error: The ai() function can only be run against Chromium browsers.
+        at getCDPSession (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:27:13)
+        at Object.getDOMSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:111:22)
+        at Object.getSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\playwright.ts:181:7)
+        at sendTaskStartMessage (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:105:20)
+        at C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:47:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: The ai() function can only be run against Chromium browsers.
+        at getCDPSession (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:27:13)
+        at Object.getDOMSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\cdp.ts:111:22)
+        at Object.getSnapshot (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\playwright.ts:181:7)
+        at sendTaskStartMessage (C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:105:20)
+        at C:\Cursuri\Code\Playwright\node_modules\@zerostep\playwright\src\index.ts:47:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone\video.webm]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\video.webm]]
+
+[[ATTACHMENT|..\test-results\demo_ai.js-BlazeDemo-Fligh-32e4d-serve-a-Flight-on-BlazeDemo-iPhone-retry1\trace.zip]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>
