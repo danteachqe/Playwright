@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -119,14 +121,508 @@
     "workers": 1,
     "webServer": null
   },
-  "suites": [],
+  "suites": [
+    {
+      "title": "demo_invalid.js",
+      "file": "demo_invalid.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Attempt booking with invalid data",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Chrome",
+              "projectName": "Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 2618,
+                  "error": {
+                    "message": "TimeoutError: page.goto: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://blazedemo.com/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "TimeoutError: page.goto: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://blazedemo.com/\", waiting until \"load\"\u001b[22m\n\n    at HomePage.goto (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:56:25)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:25:18",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 25,
+                      "line": 56
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m \u001b[90m     */\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Relative URL; Playwright prepends baseURL\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m     }\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 25,
+                        "line": 56
+                      },
+                      "message": "TimeoutError: page.goto: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://blazedemo.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m \u001b[90m     */\u001b[39m\n \u001b[90m 55 |\u001b[39m     \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Relative URL; Playwright prepends baseURL\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m     }\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.goto (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:56:25)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:25:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-10T17:38:17.806Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 25,
+                    "line": 56
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 3332,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-06-10T17:38:22.526Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2f8a6a8712b24c78ff9-63cfc3968eadad74f4cd",
+          "file": "demo_invalid.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Attempt booking with invalid data",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 4695,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-10T17:38:27.507Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 4597,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-06-10T17:38:35.908Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2f8a6a8712b24c78ff9-0de727917b13afe05a68",
+          "file": "demo_invalid.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Attempt booking with invalid data",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Edge",
+              "projectName": "Edge",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 3840,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-10T17:38:43.823Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Edge\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Edge\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "status": "failed",
+                  "duration": 3727,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-06-10T17:38:50.478Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2f8a6a8712b24c78ff9-12831562625f781c2374",
+          "file": "demo_invalid.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Attempt booking with invalid data",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android",
+              "projectName": "Android",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 3420,
+                  "error": {
+                    "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "TimeoutError: locator.selectOption: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-10T17:38:56.528Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Android\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Android\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "status": "interrupted",
+                  "duration": 1968,
+                  "error": {
+                    "message": "Error: locator.selectOption: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and enabled\u001b[22m\n\u001b[2m    - did not find some options\u001b[22m\n\u001b[2m  - retrying select option action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+                    "stack": "Error: locator.selectOption: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and enabled\u001b[22m\n\u001b[2m    - did not find some options\u001b[22m\n\u001b[2m  - retrying select option action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\n    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3",
+                    "location": {
+                      "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                      "column": 32,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                        "column": 32,
+                        "line": 74
+                      },
+                      "message": "Error: locator.selectOption: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//select[@name=\"fromPort\"]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"fromPort\" class=\"form-inline\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - did not find some options\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    - waiting for element to be visible and enabled\u001b[22m\n\u001b[2m    - did not find some options\u001b[22m\n\u001b[2m  - retrying select option action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\Pages\\HomePage.js:74\n\n\u001b[0m \u001b[90m 72 |\u001b[39m     \u001b[36masync\u001b[39m selectDepartureCity(city) {\n \u001b[90m 73 |\u001b[39m         \u001b[36mconst\u001b[39m departureLocator \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mgetLocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mdepartureDropdown)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m         \u001b[36mawait\u001b[39m departureLocator\u001b[33m.\u001b[39mselectOption({ label\u001b[33m:\u001b[39m city })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m     }\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m     \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.selectDepartureCity (C:\\code\\playwright\\Playwright\\Pages\\HomePage.js:74:32)\u001b[22m\n\u001b[2m    at C:\\code\\playwright\\Playwright\\tests\\demo_invalid.js:29:3\u001b[22m"
+                    },
+                    {
+                      "message": "Error: Target page, context or browser has been closed"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-06-10T17:39:01.769Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\code\\playwright\\Playwright\\test-results\\demo_invalid.js-Attempt-booking-with-invalid-data-Android-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\code\\playwright\\Playwright\\Pages\\HomePage.js",
+                    "column": 32,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2f8a6a8712b24c78ff9-1e699b24914d9c35dde6",
+          "file": "demo_invalid.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Attempt booking with invalid data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone",
+              "projectName": "iPhone",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "b2f8a6a8712b24c78ff9-b7285408487d5c46ad4c",
+          "file": "demo_invalid.js",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    }
+  ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-10T14:36:46.408Z",
-    "duration": 39639.315,
+    "startTime": "2025-06-10T17:38:16.450Z",
+    "duration": 48738.857,
     "expected": 0,
-    "skipped": 0,
-    "unexpected": 0,
+    "skipped": 1,
+    "unexpected": 4,
     "flaky": 0
   }
 }

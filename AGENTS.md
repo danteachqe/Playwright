@@ -10,3 +10,5 @@ Key elements include:
 - Automated tests reside under `tests/` (e.g., `demo.js`, `demo_ai.js`, `skip_clock.js`, etc.).
 - Test data files can be found in `data/`.
 Use `playwright.config.js` to adjust browser settings or test behavior.
+
+Do no run the tests in any headed manner
