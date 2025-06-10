@@ -20,7 +20,7 @@ module.exports = defineConfig({
       name: 'Chrome',
       use: {
         ...devices['Desktop Chrome'], // Use Chrome browser
-        headless: false, // Run in headless mode
+        headless: true, // Run in headless mode
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
@@ -59,7 +59,7 @@ module.exports = defineConfig({
       name: 'Android',
       use: {
         ...devices['Pixel 5'], // Use Android device (Pixel 5)
-        headless: false, // Run in non-headless mode for mobile
+        headless: true, // Run in headless mode for mobile
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
@@ -71,7 +71,7 @@ module.exports = defineConfig({
       name: 'iPhone',
       use: {
         ...devices['iPhone 12'], // Use iPhone device (iPhone 12)
-        headless: false, // Run in non-headless mode for mobile
+        headless: true, // Run in headless mode for mobile
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
