@@ -2,7 +2,7 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests', // Directory where tests are located
-  testMatch: '**/*demo_ai*.js',      // Matches test files
+  testMatch: '**/demo_invalid*.js',      // Matches only demo_invalid.js file
   timeout: 300000, // Max time one test can run for (300 sec)
 
   // Retry failed tests n times (helps in flaky environments)
@@ -95,4 +95,3 @@ module.exports = defineConfig({
   // Keep test artifacts (screenshots, traces) always
   preserveOutput: 'always',
 });
- // 
