@@ -48,3 +48,5 @@ start reports/html/index.html
 
 ---
 For more details, see `playwright.config.js` and the `Pages/` directory.
+
+Unless specified in the prompt do not try to run any of the tests, or code, when you do any code changes
