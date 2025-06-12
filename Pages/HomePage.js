@@ -71,6 +71,11 @@ class HomePage {
      */
     async selectDepartureCity(city) {
         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
+        // Fail fast if city is not in dropdown
+        const options = await departureLocator.locator('option').allTextContents();
+        if (!options.includes(city)) {
+            throw new Error(`Departure city '${city}' not found in dropdown options: ${options.join(', ')}`);
+        }
         await departureLocator.selectOption({ label: city });
     }
 
@@ -80,6 +85,11 @@ class HomePage {
      */
     async selectDestinationCity(city) {
         const destinationLocator = await this.getLocator(this.selectors.destinationDropdown);
+        // Fail fast if city is not in dropdown
+        const options = await destinationLocator.locator('option').allTextContents();
+        if (!options.includes(city)) {
+            throw new Error(`Destination city '${city}' not found in dropdown options: ${options.join(', ')}`);
+        }
         await destinationLocator.selectOption({ label: city });
     }
 

@@ -1,1 +1,23 @@
-I'm sorry, but I don't have the ability to provide you with any code alterations as you're asking for.
+# Node dependencies
+node_modules/
+
+# Playwright test results and reports
+reports/
+test-results/
+
+# VSCode settings
+.vscode/
+
+# OS/Editor files
+.DS_Store
+Thumbs.db
+
+# Playwright artifacts
+*.log
+*.zip
+*.webm
+*.png
+*.mp4
+
+# Misc
+.env

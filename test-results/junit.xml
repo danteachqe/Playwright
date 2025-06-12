@@ -1,8 +1,21 @@
-<testsuites id="" name="" tests="5" failures="4" skipped="1" errors="0" time="48.738857">
-<testsuite name="demo_invalid.js" timestamp="2025-06-10T17:38:16.559Z" hostname="Chrome" tests="1" failures="1" skipped="0" time="5.95" errors="0">
-<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="5.95">
+<testsuites id="" name="" tests="5" failures="1" skipped="3" errors="0" time="32.64844599999999">
+<testsuite name="demo_invalid.js" timestamp="2025-06-10T19:04:10.718Z" hostname="Chrome" tests="1" failures="0" skipped="0" time="10.401" errors="0">
+<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="10.401">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\video.webm]]
+
+[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="demo_invalid.js" timestamp="2025-06-10T19:04:10.718Z" hostname="Firefox" tests="1" failures="1" skipped="0" time="4.046" errors="0">
+<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="4.046">
 <failure message="demo_invalid.js:14:1 Attempt booking with invalid data" type="FAILURE">
-<![CDATA[  [Chrome] › demo_invalid.js:14:1 › Attempt booking with invalid data ──────────────────────────────
+<![CDATA[  [Firefox] › demo_invalid.js:14:1 › Attempt booking with invalid data ─────────────────────────────
 
     TimeoutError: page.goto: Timeout 2000ms exceeded.
     Call log:
@@ -19,116 +32,7 @@
       58 |
       59 |     /**
         at HomePage.goto (C:\code\playwright\Playwright\Pages\HomePage.js:56:25)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:25:18
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        4 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome\video.webm]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\video.webm]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Chrome-retry1\trace.zip]]
-]]>
-</system-out>
-</testcase>
-</testsuite>
-<testsuite name="demo_invalid.js" timestamp="2025-06-10T17:38:16.559Z" hostname="Firefox" tests="1" failures="1" skipped="0" time="9.292" errors="0">
-<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="9.292">
-<failure message="demo_invalid.js:14:1 Attempt booking with invalid data" type="FAILURE">
-<![CDATA[  [Firefox] › demo_invalid.js:14:1 › Attempt booking with invalid data ─────────────────────────────
-
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        4 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
+        at C:\code\playwright\Playwright\tests\demo_invalid.js:26:18
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox\test-failed-1.png
@@ -140,46 +44,31 @@
 
     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
 
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
+    Test was interrupted.
+
+    Error: browserType.launch: Target page, context or browser has been closed
+    Browser logs:
+
+    <launching> C:\Users\dbucureanu\AppData\Local\ms-playwright\firefox-1466\firefox\firefox.exe -no-remote -headless -profile C:\Users\DBUCUR~1\AppData\Local\Temp\playwright_firefoxdev_profile-ufgJsW -juggler-pipe -silent
+    <launched> pid=59728
+    [pid=59728][err] *** You are running in headless mode.
+    [pid=59728][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 116: unreachable code after return statement
+    [pid=59728][out] console.warn: services.settings: Ignoring preference override of remote settings server
+    [pid=59728][out] console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+    [pid=59728] <process did exit: exitCode=3221225786, signal=null>
+    [pid=59728] starting temporary directories cleanup
     Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        3 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
+      - <launching> C:\Users\dbucureanu\AppData\Local\ms-playwright\firefox-1466\firefox\firefox.exe -no-remote -headless -profile C:\Users\DBUCUR~1\AppData\Local\Temp\playwright_firefoxdev_profile-ufgJsW -juggler-pipe -silent
+      - <launched> pid=59728
+      - [pid=59728][err] *** You are running in headless mode.
+      - [pid=59728][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 116: unreachable code after return statement
+      - [pid=59728][out] console.warn: services.settings: Ignoring preference override of remote settings server
+      - [pid=59728][out] console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+      - [pid=59728] <process did exit: exitCode=3221225786, signal=null>
+      - [pid=59728] starting temporary directories cleanup
 
 
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
     test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\trace.zip
     Usage:
 
@@ -194,226 +83,24 @@
 
 [[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Firefox\video.webm]]
 
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\video.webm]]
-
 [[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Firefox-retry1\trace.zip]]
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="demo_invalid.js" timestamp="2025-06-10T17:38:16.559Z" hostname="Edge" tests="1" failures="1" skipped="0" time="7.567" errors="0">
-<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="7.567">
-<failure message="demo_invalid.js:14:1 Attempt booking with invalid data" type="FAILURE">
-<![CDATA[  [Edge] › demo_invalid.js:14:1 › Attempt booking with invalid data ────────────────────────────────
-
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        4 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        4 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Edge\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Edge\video.webm]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\video.webm]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Edge-retry1\trace.zip]]
-]]>
-</system-out>
+<testsuite name="demo_invalid.js" timestamp="2025-06-10T19:04:10.718Z" hostname="Edge" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="demo_invalid.js" timestamp="2025-06-10T17:38:16.559Z" hostname="Android" tests="1" failures="1" skipped="0" time="5.388" errors="0">
-<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="5.388">
-<failure message="demo_invalid.js:14:1 Attempt booking with invalid data" type="FAILURE">
-<![CDATA[  [Android] › demo_invalid.js:14:1 › Attempt booking with invalid data ─────────────────────────────
-
-    TimeoutError: locator.selectOption: Timeout 2000ms exceeded.
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        4 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Android\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Android\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
-
-    Test was interrupted.
-
-    Error: locator.selectOption: Target page, context or browser has been closed
-    Call log:
-      - waiting for locator('//select[@name="fromPort"]')
-        - locator resolved to <select name="fromPort" class="form-inline">…</select>
-      - attempting select option action
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-        - waiting 20ms
-        2 × waiting for element to be visible and enabled
-          - did not find some options
-        - retrying select option action
-          - waiting 100ms
-        - waiting for element to be visible and enabled
-        - did not find some options
-      - retrying select option action
-        - waiting 500ms
-
-
-       at ..\Pages\HomePage.js:74
-
-      72 |     async selectDepartureCity(city) {
-      73 |         const departureLocator = await this.getLocator(this.selectors.departureDropdown);
-    > 74 |         await departureLocator.selectOption({ label: city });
-         |                                ^
-      75 |     }
-      76 |
-      77 |     /**
-        at HomePage.selectDepartureCity (C:\code\playwright\Playwright\Pages\HomePage.js:74:32)
-        at C:\code\playwright\Playwright\tests\demo_invalid.js:29:3
-
-    Error: Target page, context or browser has been closed
-
-    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Android-retry1\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\demo_invalid.js-Attempt-booking-with-invalid-data-Android-retry1\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Android\test-failed-1.png]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Android\video.webm]]
-
-[[ATTACHMENT|demo_invalid.js-Attempt-booking-with-invalid-data-Android-retry1\trace.zip]]
-]]>
-</system-out>
+<testsuite name="demo_invalid.js" timestamp="2025-06-10T19:04:10.718Z" hostname="Android" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="0">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
-<testsuite name="demo_invalid.js" timestamp="2025-06-10T17:38:16.559Z" hostname="iPhone" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testsuite name="demo_invalid.js" timestamp="2025-06-10T19:04:10.718Z" hostname="iPhone" tests="1" failures="0" skipped="1" time="0" errors="0">
 <testcase name="Attempt booking with invalid data" classname="demo_invalid.js" time="0">
 <skipped>
 </skipped>

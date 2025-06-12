@@ -1,17 +1,18 @@
 {
-  "name": "playwright-project",
+  "name": "playwright-blazedemo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright-based automation framework for BlazeDemo.",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:ci": "playwright test --reporter=list,html,json,junit",
+    "test:all": "playwright test tests/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.49.1",
-    "@zerostep/playwright": "^0.1.5"
+    "@playwright/test": "^1.52.0"
   },
   "dependencies": {
-    "playwright": "^1.48.0"
+    "playwright": "^1.52.0"
   }
 }

@@ -20,7 +20,7 @@ module.exports = defineConfig({
       name: 'Chrome',
       use: {
         ...devices['Desktop Chrome'], // Use Chrome browser
-        headless: true, // Run in headless mode
+        headless: true, // Always run in headless mode for best practice
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
@@ -33,7 +33,7 @@ module.exports = defineConfig({
       name: 'Firefox',
       use: {
         ...devices['Desktop Firefox'], // Use Firefox browser
-        headless: true,
+        headless: true, // Always run in headless mode for best practice
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
@@ -46,7 +46,7 @@ module.exports = defineConfig({
       name: 'Edge',
       use: {
         channel: 'msedge', // Use Microsoft Edge browser
-        headless: true,
+        headless: true, // Always run in headless mode for best practice
         viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
@@ -59,7 +59,7 @@ module.exports = defineConfig({
       name: 'Android',
       use: {
         ...devices['Pixel 5'], // Use Android device (Pixel 5)
-        headless: true, // Run in headless mode for mobile
+        headless: true, // Always run in headless mode for best practice
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
@@ -71,7 +71,7 @@ module.exports = defineConfig({
       name: 'iPhone',
       use: {
         ...devices['iPhone 12'], // Use iPhone device (iPhone 12)
-        headless: true, // Run in headless mode for mobile
+        headless: true, // Always run in headless mode for best practice
         ignoreHTTPSErrors: true,
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
